@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="fontDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
   </data>
@@ -130,14 +130,14 @@
   <data name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>418, 17</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.TrayHeight" type="System.Int32, mscorlib">
     <value>39</value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAtkAAAB/CAYAAAA6l95EAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAAd0SU1FB90HFw8BDXFsHKYAAP+fSURBVHhe7L0FuB3V9f7/p7SUAjXab7EK7lDD
+        DAAACwwBP0AiyAAAAAd0SU1FB90HFw8BDXFsHKYAAP+fSURBVHhe7L0FuB3V9f7/p7SUAjXab7EK7lDD
         3S3uISHuBvEQDzE0gSiWBHcNLkHjAUKCB4cCbfECNQrZ//XZM++5607mnHtuuAmBH+d51nPPPWdm9t7v
         snevvWfO/7cGX+t9A+Tb/sob8+rIN+GV1+81Id+UV17f1zX5tr7yxvp1yXevql95uK0J+ba/8sa8tuS7
         13ev/+deeY6wLsq37ZU3xpqUdfWV19e1IevqK6+v65p8W195Y11X5LtX8srDZk3LuvrK6+s3Tdbka221

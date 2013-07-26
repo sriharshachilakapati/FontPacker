@@ -1,8 +1,8 @@
-﻿// <summary>
-// Copyright 2013 Sri Harsha Chilakapati.
+﻿// FontPacker 0.3 Beta Release
 //
-// This file is for loading fonts produced by FontPacker
-// </summary>
+// Now works with any type of font listed in the font selected dialog
+//
+// Author: Sri Harsha Chilakapati
 
 using System;
 using System.IO;
@@ -21,6 +21,7 @@ namespace FontPack
     {
         
         Dictionary<char, Image> glyphs = new Dictionary<char, Image>();
+        Dictionary<char, int> advances = new Dictionary<char, int>();
 
         /// <summary>
         /// Load a PackedFont from a file.
@@ -49,6 +50,9 @@ namespace FontPack
 
                             byte[] image = Convert.FromBase64String(fontpack.GetAttribute("data"));
 
+                            int xadvance = int.Parse(fontpack.GetAttribute("xadvance"));
+                            advances.Add(glyph, xadvance);
+                            
                             MemoryStream imgStream = new MemoryStream();
 
                             imgStream.Write(image, 0, image.Length);
@@ -65,6 +69,48 @@ namespace FontPack
             fontpack.Close();
             stream.Close();
         }
+        
+        /// <summary>
+        /// Get the Glyph of the char
+        /// </summary>
+        /// <param name="c">The character of glyph</param>
+        /// <returns>The Glyph as an Image</returns>
+        public Image GetGlyph(char c)
+        {
+            return glyphs[c];
+        }
+        
+        /// <summary>
+        /// Get the AdvanceWidth of a glyph
+        /// </summary>
+        /// <param name="c">The character of glyph</param>
+        /// <returns>The amount to move forward after drawing the glyph</returns>
+        public int GetAdvanceWidth(char c)
+        {
+            return advances[c];
+        }
+        
+        /// <summary>
+        /// Gets the Dictionary containing the Glyphs
+        /// </summary>
+        public Dictionary<char, Image> Glyphs
+        {
+            get
+            {
+                return glyphs;
+            }
+        }
+        
+        /// <summary>
+        /// Gets the Dictionary containing the AdvanceWidths
+        /// </summary>
+        public Dictionary<char, int> AdvanceWidths
+        {
+            get
+            {
+                return advances;
+            }
+        }
 
         /// <summary>
         /// Draws a string using this font at a position using the given Graphics context.
@@ -80,7 +126,6 @@ namespace FontPack
 
             foreach (char ch in text)
             {
-
                 if (ch == '\n')
                 {
                     posY += glyphs[' '].Height;
@@ -90,7 +135,7 @@ namespace FontPack
                     Image bmp = glyphs[ch];
                     g.DrawImageUnscaled(bmp, (int)posX, (int)posY);
 
-                    posX += bmp.Width;
+                    posX += advances[ch];
                 }
             }
         }
