@@ -20,7 +20,7 @@ You can use the the `FontPack` library for free in C# projects and you can even 
 
 ## Using the Fonts ##
 
-After you create a `.fontpack` file, you need to use it as XML. Here's the structure of the file.
+After you create a `.fntpack` file, you need to use it as XML. Here's the structure of the file.
 
 The xml file starts normally with the xml declaration. Then comes the root tag `<FontPacker>` which contains the `<Font>` tag with an attribute `name`.
 
