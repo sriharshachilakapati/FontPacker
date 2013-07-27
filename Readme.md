@@ -16,7 +16,9 @@
 
 This project is licenced with GNU Lesser Public Licence (LGPL) and the terms [here](http://opensource.org/licenses/LGPL-3.0).
 
-You can use the the `FontPack` library for free in C# projects and you can even sell the projects using this library.
+You can use the `FontPack` library for free in C# projects and you can even sell the projects using this library.
+
+You can use the `JFontPack` library for free in Java projects. It requires `Apache Commons Codec` library which is licenced as `Apache Commons Licence` to decode glyphs from Base64.
 
 ## Using the Fonts ##
 
