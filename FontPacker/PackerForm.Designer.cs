@@ -371,7 +371,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "PackerForm";
-            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FontPacker by Sri Harsha Chilakapati";
             this.Load += new System.EventHandler(this.PackerForm_Load);
@@ -384,6 +383,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
+
         }
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button fontTester;
